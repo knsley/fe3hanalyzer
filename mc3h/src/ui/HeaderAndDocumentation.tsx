@@ -15,9 +15,13 @@ import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import InfoIcon from '@material-ui/icons/Info';
 
-import AboutDocsUrl from './docs/about.md';
-import DocumentationUrl from './docs/docs.md';
-import FaqUrl from './docs/faq.md';
+import AboutDocsAssetUrl from './docs/about.md';
+import DocumentationAssetUrl from './docs/docs.md';
+import FaqAssetUrl from './docs/faq.md';
+
+const AboutDocsUrlSuffix = "docs/about.md";
+const DocumentationUrlSuffix = "docs/docs.md";
+const FaqUrlSuffix = "docs/faq.md"
 
 export interface FaqEntryProps
 {
@@ -46,8 +50,24 @@ const MenuIconStyle : React.CSSProperties = {
     paddingRight: 2
 };
 
+const GithubPagesRegex = /(\w+).github.io/i;
+
 export function HeaderAndDocumentation(props : HeaderAndDocumentationProps) : JSX.Element
 {
+    const hostname = window.location.hostname;
+    const segmentsMatch = hostname.match(GithubPagesRegex);
+
+    let urlPrefix : string | undefined = undefined;
+    if (segmentsMatch !== null)
+    {
+        const gitUser = segmentsMatch[1];
+        urlPrefix = `https://github.com/${gitUser}/fe3hanalyzer/`;
+    }
+
+    const FaqUrl = urlPrefix === undefined ? FaqAssetUrl : urlPrefix + FaqUrlSuffix;
+    const DocumentationUrl = urlPrefix === undefined ? DocumentationAssetUrl : urlPrefix + DocumentationUrlSuffix;
+    const AboutDocsUrl = urlPrefix === undefined ? AboutDocsAssetUrl : urlPrefix + AboutDocsUrlSuffix;
+
     return <div style={{display: 'flex', width: 1000, flexDirection: 'row'}}>
         <Card style={{margin: 8, padding: 16, flexBasis: 'auto', flexGrow: 1, flexShrink: 1}}>
             <Typography variant="h3">
