@@ -15,6 +15,8 @@ import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import InfoIcon from '@material-ui/icons/Info';
 
+import GithubIcon from "../images/GitHub-Mark-32px.png";
+
 import AboutDocsAssetUrl from './docs/about.md';
 import DocumentationAssetUrl from './docs/docs.md';
 import FaqAssetUrl from './docs/faq.md';
@@ -68,11 +70,16 @@ export function HeaderAndDocumentation(props : HeaderAndDocumentationProps) : JS
     const DocumentationUrl = urlPrefix === undefined ? DocumentationAssetUrl : urlPrefix + DocumentationUrlSuffix;
     const AboutDocsUrl = urlPrefix === undefined ? AboutDocsAssetUrl : urlPrefix + AboutDocsUrlSuffix;
 
+    const RepositoryUrl = urlPrefix ?? "#";
+
     return <div style={{display: 'flex', width: 1000, flexDirection: 'row'}}>
         <Card style={{margin: 8, padding: 16, flexBasis: 'auto', flexGrow: 1, flexShrink: 1}}>
             <Typography variant="h3">
                 FE:3H Character Analyzer
             </Typography>
+            <a href={RepositoryUrl} style={{display: 'block', float: 'right', marginTop: 18}}>
+                <img src={GithubIcon} alt="Link to GitHub repository" style={{height: 16, width: 16}}/>
+            </a>
             <div style={LinksTrayStyle}>
                 <Link href={FaqUrl} underline="always"><HelpOutlineIcon fontSize="small" style={{...MenuIconStyle, marginLeft: 0}}/>FAQ</Link>
                 <Link href={DocumentationUrl} underline="always"><MenuBookIcon fontSize="small" style={MenuIconStyle}/>Documentation</Link>
