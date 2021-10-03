@@ -61,7 +61,7 @@ export function HeaderAndDocumentation(props : HeaderAndDocumentationProps) : JS
     if (segmentsMatch !== null)
     {
         const gitUser = segmentsMatch[1];
-        urlPrefix = `https://github.com/${gitUser}/fe3hanalyzer/`;
+        urlPrefix = `https://github.com/${gitUser}/fe3hanalyzer/blob/main/`;
     }
 
     const FaqUrl = urlPrefix === undefined ? FaqAssetUrl : urlPrefix + FaqUrlSuffix;
