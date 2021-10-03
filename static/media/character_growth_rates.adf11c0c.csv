@@ -1,0 +1,67 @@
+# Copyright 2021 knsley
+# (https://github.com/knsley)
+
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+# Data Source: https://serenesforest.net/three-houses/
+
+# columns: name,HP,STR,MAG,DEX,SPD,LCK,DEF,RES,CHA (as percentages)
+
+# Protagonist
+"Byleth (Male)",45,45,35,45,45,45,35,30,45
+"Byleth (Female)",45,45,35,45,45,45,35,30,45
+
+# Black Eagles
+Edelgard,40,55,45,45,40,30,35,35,60
+Hubert,35,30,55,45,45,35,25,40,35
+Dorothea,40,20,40,45,40,35,15,35,40
+Ferdinand,50,45,20,40,50,40,35,20,40
+Bernadetta,35,35,20,55,50,25,20,30,35
+Caspar,55,45,25,45,45,40,30,20,25
+Petra,45,40,25,50,60,45,30,15,35
+Linhardt,30,30,45,40,40,45,30,45,20
+
+# Blue Lions
+Dimitri,55,60,20,50,50,25,40,20,55
+Dedue,60,50,15,30,20,25,50,10,30
+Felix,45,55,30,45,55,40,30,20,30
+Mercedes,30,25,50,45,40,30,25,45,40
+Ashe,35,35,25,55,50,40,20,35,25
+Annette,25,30,50,50,35,35,20,30,35
+Sylvain,55,45,30,35,50,35,40,25,40
+Ingrid,40,35,35,40,60,45,30,40,45
+
+# Golden Deer
+Claude,35,40,25,60,55,45,30,25,55
+Lorenz,55,40,40,45,40,25,30,40,35
+Hilda,50,45,25,30,50,35,35,20,50
+Raphael,65,50,15,35,15,35,45,10,25
+Lysithea,20,15,60,60,50,15,10,25,25
+Ignatz,35,35,30,50,50,55,25,35,25
+Marianne,35,20,50,40,40,35,15,45,40
+Leonie,40,40,20,55,60,40,40,15,40
+
+# Church
+Manuela,50,35,35,40,60,35,30,25,50
+Hanneman,40,30,55,45,20,35,25,40,35
+Seteth,50,45,35,50,50,25,30,25,45
+Flayn,25,25,55,45,35,15,25,50,45
+Catherine,50,50,25,40,55,30,30,20,25
+Alois,45,45,20,35,40,30,40,20,40
+Gilbert,55,45,20,45,30,15,45,10,35
+Shamir,35,40,20,55,40,55,20,15,30
+# Factor in aptitude skill
+#Cyril,35,20,15,40,40,30,10,10,15
+Cyril,55,40,35,60,60,50,30,30,35
+
+# Ashen Wolves
+Yuri,30,40,35,40,65,45,30,35,50
+Balthus,50,50,30,25,30,20,45,30,30
+Constance,20,20,60,30,35,15,15,30,25
+Hapi,35,35,45,45,40,20,15,45,25
+
+# Misc
+Jeritza,50,50,35,35,60,30,40,25,25
+Anna,35,35,35,45,55,45,30,40,50
