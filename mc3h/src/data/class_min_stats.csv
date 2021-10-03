@@ -1,0 +1,81 @@
+# Copyright 2021 knsley
+# (https://github.com/knsley)
+
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+# Data Source: https://serenesforest.net/three-houses/
+
+# Columns: class name, HP,Str,Mag,Dex,Spd,Lck,Def,Res,Cha,Mov
+,,,,,,,,,,
+# Base classes,,,,,,,,,,
+Noble,0,0,0,0,0,0,0,0,0,4
+Commoner,0,0,0,0,0,0,0,0,0,4
+Dancer,0,0,0,0,0,0,0,0,0,6
+,,,,,,,,,,
+# Protagonist,,,,,,,,,,
+Enlightened One,28,17,8,12,14,10,12,10,0,6
+,,,,,,,,,,
+# House Leaders,,,,,,,,,,
+Lord,25,9,6,10,10,8,6,3,0,5
+Armored Lord,38,17,8,12,6,10,17,8,0,5
+High Lord,30,16,7,11,13,9,13,9,0,5
+Wyvern Master,30,17,9,13,19,11,14,11,0,7
+Emperor,38,17,8,12,6,10,17,8,0,5
+Great Lord,35,17,8,12,14,10,14,10,0,6
+Barbarossa,35,18,10,14,20,12,15,12,0,8
+,,,,,,,,,,
+# Beginner l5,,,,,,,,,,
+Myrmidon,20,7,3,6,6,4,5,2,0,4
+Soldier,20,8,3,6,6,4,5,2,0,4
+Fighter,20,8,3,6,6,4,5,2,0,4
+Monk,20,4,8,6,6,4,3,4,0,4
+,,,,,,,,,,
+# Intermediate l10,,,,,,,,,,
+Mercenary,25,9,6,10,10,8,6,2,0,5
+Thief,25,9,6,11,11,8,6,2,0,5
+Armored Knight,30,9,6,7,4,8,12,1,0,4
+Cavalier,25,9,6,7,6,8,6,2,0,7
+Brigand,28,10,6,7,7,8,6,2,0,5
+Archer,25,8,6,8,7,8,5,2,0,5
+Brawler,28,9,6,7,8,8,6,1,0,5
+Mage,25,4,10,7,6,8,3,5,0,4
+Dark Mage,25,4,10,7,6,8,3,5,0,4
+Priest,25,4,9,7,6,8,3,5,0,4
+Pegasus Knight,25,8,6,7,8,8,5,4,0,6
+,,,,,,,,,,
+# Advanced l20,,,,,,,,,,
+Hero,30,17,8,12,14,10,12,8,0,5
+Swordmaster,30,17,8,12,14,10,12,8,0,5
+Assassin,30,17,8,12,14,10,12,8,0,6
+Fortress Knight,35,17,8,12,8,10,17,7,0,4
+Paladin,32,17,8,12,14,10,12,8,0,8
+Wyvern Rider,30,18,8,12,14,10,12,8,0,7
+Warrior,32,19,8,12,14,10,13,8,0,5
+Sniper,30,17,8,12,14,10,12,8,0,5
+Grappler,32,17,8,12,14,10,14,7,0,6
+Warlock,30,8,17,12,14,10,12,15,0,4
+Dark Bishop,30,8,17,12,14,10,12,15,0,4
+Bishop,30,8,15,12,14,10,12,15,0,4
+,,,,,,,,,,
+# Master l30,,,,,,,,,,
+Falcon Knight,32,18,10,14,20,12,13,14,0,8
+Wyvern Lord,32,18,10,14,20,12,15,12,0,8
+Mortal Savant,32,17,17,14,16,12,14,12,0,6
+Great Knight,34,18,10,14,10,12,17,10,0,7
+Bow Knight,32,17,10,14,16,12,14,10,0,8
+Dark Knight,32,10,17,14,16,12,13,15,0,7
+Holy Knight,32,8,15,14,16,12,13,16,0,7
+War Master,33,20,10,14,16,12,15,10,0,6
+Gremory,32,8,17,14,16,12,13,16,0,5
+,,,,,,,,,,
+# DLC,,,,,,,,,,
+Trickster,28,14,12,10,14,12,10,10,0,5
+War Monk,32,17,10,10,10,10,14,11,0,6
+War Cleric,32,17,10,10,10,10,14,11,0,6
+Dark Flier,25,8,6,7,8,8,5,4,0,7
+Valkyrie,20,5,10,10,9,9,9,13,0,6
+,,,,,,,,,,
+# Extra,,,,,,,,,,
+Death Knight,32,10,17,14,16,12,13,15,0,7

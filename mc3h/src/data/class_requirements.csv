@@ -1,0 +1,83 @@
+# Copyright 2021 knsley
+# (https://github.com/knsley)
+
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+# Data Source: https://serenesforest.net/three-houses/
+
+# Columns: class, min level, gender, allowed characters
+,,,
+# Starting classes,,,
+Noble,1,,NobleBackgrounds
+Commoner,1,,CommonerBackgrounds
+Dancer,1,,
+,,,
+# Protagonist,,,
+Enlightened One,1,,ProtagonistBackgrounds
+,,,
+# House Leaders,,,
+Armored Lord,1,,Edelgard
+High Lord,1,,Dimitri
+Wyvern Master,1,,Claude
+Emperor,1,,Edelgard
+Great Lord,1,,Dimitri
+Barbarossa,1,,Claude
+,,,
+# Beginner l5,,,
+Myrmidon,5,,
+Soldier,5,,
+Fighter,5,,
+Monk,5,,
+,,,
+# Intermediate l10,,,
+Lord,10,,LordBackgrounds
+Mercenary,10,,
+Thief,10,,
+Armored Knight,10,,
+Cavalier,10,,
+Brigand,10,,
+Archer,10,,
+Brawler,10,m,
+Mage,10,,
+Dark Mage,10,m,
+Priest,10,,
+Pegasus Knight,10,f,
+,,,
+# Advanced l20,,,
+Hero,20,m,
+Swordmaster,20,,
+Swordmaster,7,,Catherine
+Assassin,20,,
+Fortress Knight,20,,
+Paladin,20,,
+Wyvern Rider,20,,
+Warrior,20,,
+Sniper,20,,
+Sniper,11,,Shamir
+Grappler,20,m,
+Warlock,20,,
+Dark Bishop,20,m,
+Bishop,20,,
+,,,
+# Master l30,,,
+Falcon Knight,30,f,
+Wyvern Lord,30,,
+Mortal Savant,30,,
+Great Knight,30,,
+Bow Knight,30,,
+Dark Knight,30,,
+Holy Knight,30,,
+War Master,30,m,
+Gremory,30,f,
+,,,
+# DLC,,,
+Trickster,20,,
+War Monk,20,m,
+War Cleric,20,f,
+Dark Flier,20,f,
+Valkyrie,20,f,
+,,,
+# Extra,,,
+Death Knight,1,,Jeritza

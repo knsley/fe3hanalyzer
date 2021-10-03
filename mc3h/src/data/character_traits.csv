@@ -1,0 +1,65 @@
+# Copyright 2021 knsley
+# (https://github.com/knsley)
+
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+# Data Source: https://serenesforest.net/three-houses/
+
+# columns: name,gender,is_student
+
+# Protagonist
+Byleth (Male),m,true
+Byleth (Female),f,true
+
+# Black Eagles
+Edelgard,f,true
+Hubert,m,true
+Dorothea,f,true
+Ferdinand,m,true
+Bernadetta,f,true
+Caspar,m,true
+Petra,f,true
+Linhardt,m,true
+
+# Blue Lions
+Dimitri,m,true
+Dedue,m,true
+Felix,m,true
+Mercedes,f,true
+Ashe,m,true
+Annette,f,true
+Sylvain,m,true
+Ingrid,f,true
+
+# Golden Deer
+Claude,m,true
+Lorenz,m,true
+Hilda,f,true
+Raphael,m,true
+Lysithea,f,true
+Ignatz,m,true
+Marianne,f,true
+Leonie,f,true
+
+# Church
+Manuela,f,false
+Hanneman,m,false
+Seteth,m,false
+Flayn,f,true
+Cyril,m,true
+Catherine,f,false
+Alois,m,false
+Gilbert,m,false
+Shamir,f,false
+
+# Ashen Wolves
+Yuri,m,true
+Balthus,m,true
+Constance,f,true
+Hapi,f,true
+
+# Misc
+Jeritza,m,false
+Anna,f,true
