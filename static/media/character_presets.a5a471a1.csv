@@ -1,0 +1,411 @@
+# Copyright 2021 knsley
+# (https://github.com/knsley)
+
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+# Data Source: https://fireemblemwiki.org/wiki/
+
+# columns: name, level, class, HP, STR, MAG, DEX, SPD, LCK, DEF, RES, CHA, description
+
+# Protagonist
+Byleth (Male),1,Commoner,27,13,6,9,8,8,6,6,7,Initial Stats
+Byleth (Male),20,Swordmaster,44,27,13,20,26,17,18,11,17,Cindered Shadows Initial Stats
+Byleth (Female),1,Commoner,27,13,6,9,8,8,6,6,7,Initial Stats
+Byleth (Female),20,Swordmaster,44,27,13,20,26,17,18,11,17,Cindered Shadows Initial Stats
+
+# Black Eagles
+
+Edelgard,1,Noble,29,13,6,6,8,5,6,4,10,Initial Stats
+Edelgard,20,Fortress Knight,51,29,15,14,10,11,27,11,22,Cindered Shadows Initial Stats
+
+Hubert,1,Noble,22,6,12,6,7,6,4,7,6,Initial Stats
+
+Dorothea,1,Commoner,24,5,11,6,7,6,4,7,8,Initial Stats
+Dorothea,3,Commoner,25,5,12,7,8,7,4,8,9,Recruit at Chapter 2
+Dorothea,5,Monk,26,6,13,8,9,7,5,10,10,Recruit at Chapter 3
+Dorothea,7,Monk,27,6,13,9,9,8,5,11,11,Recruit at Chapter 4
+Dorothea,9,Monk,28,7,14,10,10,9,5,12,12,Recruit at Chapter 5
+Dorothea,11,Mage,29,7,17,12,11,10,5,15,13,Recruit at Chapter 6
+Dorothea,13,Mage,30,7,18,12,12,10,5,16,13,Recruit at Chapter 7
+Dorothea,15,Mage,31,7,19,13,13,11,5,17,14,Recruit at Chapter 8
+Dorothea,17,Mage,32,7,20,14,13,12,5,19,15,Recruit at Chapter 9
+Dorothea,19,Mage,33,8,21,15,14,12,5,20,16,Recruit at Chapter 10
+Dorothea,21,Mage,34,8,22,16,15,13,5,21,17,Recruit at Chapter 11
+Dorothea,23,Mage,35,8,23,17,16,14,5,22,18,Recruit at Chapter 12
+
+Ferdinand,1,Noble,28,8,5,6,8,6,6,2,7,Initial Stats
+Ferdinand,3,Noble,29,9,5,7,9,7,7,2,8,Recruit at Chapter 2
+Ferdinand,5,Soldier,30,10,6,9,10,8,7,2,9,Recruit at Chapter 3
+Ferdinand,7,Soldier,32,11,6,10,11,8,8,3,10,Recruit at Chapter 4
+Ferdinand,9,Soldier,33,12,7,11,12,9,9,3,11,Recruit at Chapter 5
+Ferdinand,11,Cavalier,36,16,7,12,12,10,12,4,12,Recruit at Chapter 6
+Ferdinand,13,Cavalier,37,17,7,13,13,11,13,4,12,Recruit at Chapter 7
+Ferdinand,15,Cavalier,39,18,8,14,14,12,14,5,13,Recruit at Chapter 8
+Ferdinand,17,Cavalier,40,19,8,14,15,12,15,5,14,Recruit at Chapter 9
+Ferdinand,19,Cavalier,42,21,9,15,16,13,16,6,15,Recruit at Chapter 10
+Ferdinand,21,Cavalier,43,22,9,16,17,14,17,6,16,Recruit at Chapter 11
+Ferdinand,23,Cavalier,44,23,9,17,18,15,18,6,17,Recruit at Chapter 12
+
+Bernadetta,1,Noble,25,8,5,7,7,5,4,2,6,Initial Stats
+Bernadetta,3,Noble,26,9,5,8,8,6,4,3,7,Recruit at Chapter 2
+Bernadetta,5,Fighter,27,11,6,9,9,6,5,3,8,Recruit at Chapter 3
+Bernadetta,7,Fighter,28,12,6,10,10,7,5,3,8,Recruit at Chapter 4
+Bernadetta,9,Fighter,29,13,7,11,11,7,6,4,9,Recruit at Chapter 5
+Bernadetta,11,Archer,30,13,7,16,12,11,6,5,10,Recruit at Chapter 6
+Bernadetta,13,Archer,30,14,7,17,13,11,6,6,11,Recruit at Chapter 7
+Bernadetta,15,Archer,31,15,8,18,14,12,7,6,12,Recruit at Chapter 8
+Bernadetta,17,Archer,32,16,8,19,15,13,7,7,12,Recruit at Chapter 9
+Bernadetta,19,Archer,33,17,9,21,16,13,8,7,13,Recruit at Chapter 10
+Bernadetta,21,Archer,34,18,9,22,17,14,8,8,14,Recruit at Chapter 11
+Bernadetta,23,Archer,35,19,9,23,18,15,8,9,15,Recruit at Chapter 12
+
+Caspar,1,Noble,26,9,3,5,6,8,6,2,4,Initial Stats
+Caspar,3,Noble,27,10,4,6,7,9,7,2,5,Recruit at Chapter 2
+Caspar,5,Fighter,29,12,4,7,8,10,7,2,5,Recruit at Chapter 3
+Caspar,7,Fighter,30,13,5,8,9,10,8,3,6,Recruit at Chapter 4
+Caspar,9,Fighter,31,14,5,9,10,11,8,3,6,Recruit at Chapter 5
+Caspar,11,Brigand,37,18,6,10,11,12,10,3,7,Recruit at Chapter 6
+Caspar,13,Brigand,38,19,6,10,11,13,11,3,8,Recruit at Chapter 7
+Caspar,15,Brigand,40,21,7,11,12,14,12,3,8,Recruit at Chapter 8
+Caspar,17,Brigand,42,22,7,12,13,14,12,4,9,Recruit at Chapter 9
+Caspar,19,Brigand,43,24,8,13,14,15,13,4,9,Recruit at Chapter 10
+Caspar,21,Brigand,45,25,8,14,15,16,14,4,10,Recruit at Chapter 11
+Caspar,23,Brigand,47,26,9,15,16,17,15,4,11,Recruit at Chapter 12
+
+Petra,1,Commoner,25,9,3,7,10,7,5,2,6,Initial Stats
+Petra,3,Commoner,26,10,4,8,11,8,6,2,7,Recruit at Chapter 2
+Petra,5,Myrmidon,27,11,4,9,14,9,6,2,8,Recruit at Chapter 3
+Petra,7,Myrmidon,28,11,5,10,15,10,7,2,8,Recruit at Chapter 4
+Petra,9,Myrmidon,29,12,5,11,17,11,7,2,9,Recruit at Chapter 5
+Petra,11,Thief,32,15,6,15,20,12,9,4,10,Recruit at Chapter 6
+Petra,13,Thief,33,16,6,16,21,12,10,4,11,Recruit at Chapter 7
+Petra,15,Thief,34,17,7,17,23,13,11,4,12,Recruit at Chapter 8
+Petra,17,Thief,35,18,7,19,24,14,11,4,12,Recruit at Chapter 9
+Petra,19,Thief,37,19,8,20,26,15,12,5,13,Recruit at Chapter 10
+Petra,21,Thief,38,20,8,21,27,16,13,5,14,Recruit at Chapter 11
+Petra,23,Thief,39,21,9,22,29,17,14,5,15,Recruit at Chapter 12
+
+Linhardt,1,Noble,24,5,10,6,5,7,5,9,3,Initial Stats
+Linhardt,3,Noble,25,6,11,7,6,8,6,10,4,Recruit at Chapter 2
+Linhardt,5,Monk,26,6,12,8,7,9,6,12,4,Recruit at Chapter 3
+Linhardt,7,Monk,26,7,13,8,7,10,7,14,5,Recruit at Chapter 4
+Linhardt,9,Monk,27,7,14,9,8,11,7,15,5,Recruit at Chapter 5
+Linhardt,11,Priest,28,8,15,11,9,13,7,18,6,Recruit at Chapter 6
+Linhardt,13,Priest,29,8,16,12,10,14,7,19,7,Recruit at Chapter 7
+Linhardt,15,Priest,30,9,17,13,11,15,8,20,7,Recruit at Chapter 8
+Linhardt,17,Priest,30,9,18,13,11,16,8,22,8,Recruit at Chapter 9
+Linhardt,19,Priest,31,10,19,14,12,17,9,23,8,Recruit at Chapter 10
+Linhardt,21,Priest,32,10,20,15,13,18,9,24,9,Recruit at Chapter 11
+Linhardt,23,Priest,33,11,21,16,14,19,9,25,10,Recruit at Chapter 12
+Linhardt,20,Bishop,36,11,22,15,14,17,12,25,9,Cindered Shadows Initial Stats
+
+# Blue Lions
+
+Dimitri,1,Noble,28,12,4,7,7,5,7,4,9,Initial Stats
+Dimitri,20,Paladin,48,28,8,19,16,11,20,12,20,Cindered Shadows Initial Stats
+
+Dedue,1,Commoner,30,12,2,5,7,5,8,1,4,Initial Stats
+
+Felix,1,Noble,26,10,5,6,9,5,5,3,5,Initial Stats
+Felix,3,Noble,27,11,6,7,10,6,6,3,6,Recruit at Chapter 2
+Felix,5,Myrmidon,28,12,6,8,13,7,6,3,6,Recruit at Chapter 3
+Felix,7,Myrmidon,29,13,7,9,14,7,7,4,7,Recruit at Chapter 4
+Felix,9,Myrmidon,30,14,7,10,15,8,7,4,8,Recruit at Chapter 5
+Felix,11,Mercenary,34,18,8,11,17,9,9,4,9,Recruit at Chapter 6
+Felix,13,Mercenary,35,19,9,11,18,10,10,4,9,Recruit at Chapter 7
+Felix,15,Mercenary,36,21,9,12,19,11,11,4,10,Recruit at Chapter 8
+Felix,17,Mercenary,37,22,10,13,20,11,11,5,11,Recruit at Chapter 9
+Felix,19,Mercenary,39,24,10,14,22,12,12,5,11,Recruit at Chapter 10
+Felix,21,Mercenary,40,25,11,15,23,13,13,5,12,Recruit at Chapter 11
+Felix,23,Mercenary,41,26,12,16,24,14,14,5,13,Recruit at Chapter 12
+
+Mercedes,1,Commoner,25,6,10,6,8,5,5,9,8,Initial Stats
+Mercedes,3,Commoner,26,7,11,7,9,6,6,10,9,Recruit at Chapter 2
+Mercedes,5,Monk,27,7,12,8,10,6,6,12,10,Recruit at Chapter 3
+Mercedes,7,Monk,27,8,13,9,10,7,7,14,11,Recruit at Chapter 4
+Mercedes,9,Monk,28,8,14,10,11,7,7,15,12,Recruit at Chapter 5
+Mercedes,11,Priest,29,8,16,12,12,9,7,18,13,Recruit at Chapter 6
+Mercedes,13,Priest,30,8,17,12,13,10,7,19,14,Recruit at Chapter 7
+Mercedes,15,Priest,31,9,18,13,14,11,7,20,15,Recruit at Chapter 8
+Mercedes,17,Priest,31,9,19,14,14,11,7,22,16,Recruit at Chapter 9
+Mercedes,19,Priest,32,10,20,15,15,12,8,23,17,Recruit at Chapter 10
+Mercedes,21,Priest,33,10,21,16,16,13,8,24,18,Recruit at Chapter 11
+Mercedes,23,Priest,34,10,22,17,17,14,8,25,19,Recruit at Chapter 12
+
+Ashe,1,Commoner,23,8,5,8,9,6,5,6,5,Initial Stats
+Ashe,3,Commoner,24,9,6,9,10,7,5,7,6,Recruit at Chapter 2
+Ashe,5,Fighter,25,11,6,10,11,8,6,7,6,Recruit at Chapter 3
+Ashe,7,Fighter,26,12,7,11,12,8,6,8,7,Recruit at Chapter 4
+Ashe,9,Fighter,27,13,7,12,13,9,7,8,7,Recruit at Chapter 5
+Ashe,11,Archer,28,13,8,17,14,13,7,10,8,Recruit at Chapter 6
+Ashe,13,Archer,28,14,8,18,15,14,7,10,9,Recruit at Chapter 7
+Ashe,15,Archer,29,15,9,19,16,15,8,11,9,Recruit at Chapter 8
+Ashe,17,Archer,30,16,9,20,17,16,8,12,10,Recruit at Chapter 9
+Ashe,19,Archer,31,17,10,22,18,17,9,12,10,Recruit at Chapter 10
+Ashe,21,Archer,32,18,10,23,19,18,9,13,11,Recruit at Chapter 11
+Ashe,23,Archer,33,19,11,24,20,19,9,14,12,Recruit at Chapter 12
+Ashe,20,Sniper,35,19,10,29,19,17,13,13,11,Cindered Shadows Initial Stats
+
+Annette,1,Noble,23,6,11,7,7,6,5,4,6,Initial Stats
+Annette,3,Noble,24,7,12,8,8,7,5,5,7,Recruit at Chapter 2
+Annette,5,Monk,24,7,13,9,8,7,6,7,8,Recruit at Chapter 3
+Annette,7,Monk,25,8,14,10,9,8,6,8,8,Recruit at Chapter 4
+Annette,9,Monk,26,8,15,11,10,9,7,9,9,Recruit at Chapter 5
+Annette,11,Mage,27,9,18,13,11,10,6,12,10,Recruit at Chapter 6
+Annette,13,Mage,27,9,19,14,11,10,6,13,11,Recruit at Chapter 7
+Annette,15,Mage,28,10,20,15,12,11,6,14,12,Recruit at Chapter 8
+Annette,17,Mage,29,10,22,16,13,12,7,16,12,Recruit at Chapter 9
+Annette,19,Mage,29,11,23,17,13,12,7,17,13,Recruit at Chapter 10
+Annette,21,Mage,30,11,24,18,14,13,7,18,14,Recruit at Chapter 11
+Annette,23,Mage,31,12,25,19,15,14,7,19,15,Recruit at Chapter 12
+
+Sylvain,1,Noble,27,9,5,5,8,6,6,2,7,Initial Stats
+Sylvain,3,Noble,28,10,6,6,9,7,7,3,8,Recruit at Chapter 2
+Sylvain,5,Soldier,30,11,6,8,10,7,8,3,9,Recruit at Chapter 3
+Sylvain,7,Soldier,31,12,7,9,11,8,8,3,10,Recruit at Chapter 4
+Sylvain,9,Soldier,32,13,7,10,12,9,9,3,11,Recruit at Chapter 5
+Sylvain,11,Cavalier,36,17,8,11,12,10,13,5,12,Recruit at Chapter 6
+Sylvain,13,Cavalier,37,18,9,11,13,10,14,5,12,Recruit at Chapter 7
+Sylvain,15,Cavalier,39,19,9,12,14,11,15,6,13,Recruit at Chapter 8
+Sylvain,17,Cavalier,40,20,10,13,15,12,16,6,14,Recruit at Chapter 9
+Sylvain,19,Cavalier,42,22,10,13,16,12,17,7,15,Recruit at Chapter 10
+Sylvain,21,Cavalier,43,23,11,14,17,13,18,7,16,Recruit at Chapter 11
+Sylvain,23,Cavalier,45,24,12,15,18,14,19,8,17,Recruit at Chapter 12
+
+Ingrid,1,Noble,27,8,6,6,8,6,5,8,8,Initial Stats
+Ingrid,3,Noble,28,9,7,7,9,7,6,9,9,Recruit at Chapter 2
+Ingrid,5,Soldier,29,9,7,9,10,8,6,9,10,Recruit at Chapter 3
+Ingrid,7,Soldier,30,10,8,10,12,9,7,10,11,Recruit at Chapter 4
+Ingrid,9,Soldier,31,11,9,11,13,10,7,10,12,Recruit at Chapter 5
+Ingrid,11,Pegasus Knight,34,13,10,12,18,11,11,16,14,Recruit at Chapter 6
+Ingrid,13,Pegasus Knight,35,14,10,13,19,11,12,17,15,Recruit at Chapter 7
+Ingrid,15,Pegasus Knight,37,15,11,14,21,12,13,18,16,Recruit at Chapter 8
+Ingrid,17,Pegasus Knight,38,16,12,14,22,13,14,20,17,Recruit at Chapter 9
+Ingrid,19,Pegasus Knight,40,17,12,15,24,14,15,21,18,Recruit at Chapter 10
+Ingrid,21,Pegasus Knight,41,18,13,16,25,15,16,22,19,Recruit at Chapter 11
+Ingrid,23,Pegasus Knight,42,19,14,17,26,16,17,23,20,Recruit at Chapter 12
+
+# Golden Deer
+
+Claude,1,Noble,26,11,5,8,8,7,6,4,8,Initial Stats
+Claude,20,Wyvern Rider,41,26,9,20,21,16,19,8,19,Cindered Shadows Initial Stats
+
+Lorenz,1,Noble,28,8,7,6,7,5,6,6,3,Initial Stats
+Lorenz,3,Noble,29,9,8,7,8,6,7,7,4,Recruit at Chapter 2
+Lorenz,5,Soldier,31,10,9,9,9,6,7,7,5,Recruit at Chapter 3
+Lorenz,7,Soldier,32,10,9,10,9,7,8,8,5,Recruit at Chapter 4
+Lorenz,9,Soldier,33,11,10,11,10,7,8,8,6,Recruit at Chapter 5
+Lorenz,11,Cavalier,37,15,11,13,10,8,12,10,7,Recruit at Chapter 6
+Lorenz,13,Cavalier,38,16,12,13,11,8,12,11,8,Recruit at Chapter 7
+Lorenz,15,Cavalier,40,17,13,14,12,9,13,12,9,Recruit at Chapter 8
+Lorenz,17,Cavalier,41,19,13,15,12,9,14,12,9,Recruit at Chapter 9
+Lorenz,19,Cavalier,43,20,14,16,13,10,15,13,10,Recruit at Chapter 10
+Lorenz,21,Cavalier,44,21,15,17,14,10,16,14,11,Recruit at Chapter 11
+Lorenz,23,Cavalier,46,22,16,18,15,11,17,15,12,Recruit at Chapter 12
+
+Hilda,1,Noble,29,10,5,5,8,6,6,3,7,Initial Stats
+Hilda,3,Noble,30,11,6,6,9,7,7,3,8,Recruit at Chapter 2
+Hilda,5,Fighter,31,13,6,6,10,7,7,3,9,Recruit at Chapter 3
+Hilda,7,Fighter,33,14,7,7,11,8,8,4,10,Recruit at Chapter 4
+Hilda,9,Fighter,34,15,7,7,12,9,9,4,11,Recruit at Chapter 5
+Hilda,11,Brigand,39,19,8,8,13,10,11,4,13,Recruit at Chapter 6
+Hilda,13,Brigand,41,20,8,9,14,10,11,4,14,Recruit at Chapter 7
+Hilda,15,Brigand,42,22,9,9,15,11,12,4,15,Recruit at Chapter 8
+Hilda,17,Brigand,44,23,9,10,16,12,13,5,16,Recruit at Chapter 9
+Hilda,19,Brigand,45,25,10,10,17,12,14,5,17,Recruit at Chapter 10
+Hilda,21,Brigand,47,26,10,11,18,13,15,5,18,Recruit at Chapter 11
+Hilda,23,Brigand,49,27,11,12,19,14,16,5,19,Recruit at Chapter 12
+Hilda,20,Warrior,51,27,10,12,19,14,18,8,17,Cindered Shadows Initial Stats
+
+Raphael,1,Commoner,30,11,3,5,6,6,7,1,4,Initial Stats
+Raphael,3,Commoner,31,12,3,6,6,7,8,1,5,Recruit at Chapter 2
+Raphael,5,Fighter,33,14,4,6,7,7,9,2,5,Recruit at Chapter 3
+Raphael,7,Fighter,35,16,4,7,7,8,10,2,6,Recruit at Chapter 4
+Raphael,9,Fighter,36,17,4,8,7,9,11,2,6,Recruit at Chapter 5
+Raphael,11,Brawler,41,18,6,12,12,10,13,0,7,Recruit at Chapter 6
+Raphael,13,Brawler,42,19,6,12,12,10,14,0,8,Recruit at Chapter 7
+Raphael,15,Brawler,44,20,6,13,13,11,15,0,8,Recruit at Chapter 8
+Raphael,17,Brawler,46,21,6,14,14,12,16,0,9,Recruit at Chapter 9
+Raphael,19,Brawler,48,23,6,15,14,12,17,0,9,Recruit at Chapter 10
+Raphael,21,Brawler,50,24,6,16,15,13,18,0,10,Recruit at Chapter 11
+Raphael,23,Brawler,52,25,6,17,16,14,19,0,11,Recruit at Chapter 12
+
+Lysithea,1,Noble,22,4,11,7,7,4,3,4,5,Initial Stats
+Lysithea,3,Noble,22,4,12,8,8,4,3,5,6,Recruit at Chapter 2
+Lysithea,5,Monk,23,5,13,9,9,5,3,7,6,Recruit at Chapter 3
+Lysithea,7,Monk,24,5,15,11,10,5,4,8,7,Recruit at Chapter 4
+Lysithea,9,Monk,24,5,16,12,11,5,4,9,7,Recruit at Chapter 5
+Lysithea,11,Mage,25,5,19,14,12,8,3,12,8,Recruit at Chapter 6
+Lysithea,13,Mage,26,5,20,15,13,8,3,13,9,Recruit at Chapter 7
+Lysithea,15,Mage,26,5,22,16,14,8,3,14,9,Recruit at Chapter 8
+Lysithea,17,Mage,27,5,23,18,15,8,3,16,10,Recruit at Chapter 9
+Lysithea,19,Mage,27,6,25,19,16,8,3,17,10,Recruit at Chapter 10
+Lysithea,21,Mage,28,6,26,20,17,8,3,18,11,Recruit at Chapter 11
+Lysithea,23,Mage,29,6,27,21,18,8,3,19,12,Recruit at Chapter 12
+
+Ignatz,1,Commoner,25,8,5,7,8,8,4,6,4,Initial Stats
+Ignatz,3,Commoner,26,9,6,8,9,9,5,7,5,Recruit at Chapter 2
+Ignatz,5,Fighter,27,11,6,9,10,10,5,7,5,Recruit at Chapter 3
+Ignatz,7,Fighter,28,12,7,10,11,11,6,8,6,Recruit at Chapter 4
+Ignatz,9,Fighter,29,13,7,11,12,12,6,8,6,Recruit at Chapter 5
+Ignatz,11,Archer,30,13,8,15,13,17,7,10,7,Recruit at Chapter 6
+Ignatz,13,Archer,30,14,9,16,14,18,7,10,8,Recruit at Chapter 7
+Ignatz,15,Archer,31,15,9,17,15,19,8,11,8,Recruit at Chapter 8
+Ignatz,17,Archer,32,16,10,19,16,20,8,12,9,Recruit at Chapter 9
+Ignatz,19,Archer,33,17,10,20,17,22,9,12,9,Recruit at Chapter 10
+Ignatz,21,Archer,34,18,11,21,18,23,9,13,10,Recruit at Chapter 11
+Ignatz,23,Archer,35,19,12,22,19,24,10,14,11,Recruit at Chapter 12
+
+Marianne,1,Noble,23,5,11,6,7,6,4,8,7,Initial Stats
+Marianne,3,Noble,24,5,12,7,8,7,4,9,8,Recruit at Chapter 2
+Marianne,5,Monk,25,6,13,8,9,7,5,11,9,Recruit at Chapter 3
+Marianne,7,Monk,26,6,14,8,9,8,5,13,10,Recruit at Chapter 4
+Marianne,9,Monk,27,7,15,9,10,9,5,14,11,Recruit at Chapter 5
+Marianne,11,Priest,28,7,17,11,11,11,5,17,12,Recruit at Chapter 6
+Marianne,13,Priest,28,7,18,12,12,11,5,18,13,Recruit at Chapter 7
+Marianne,15,Priest,29,7,19,13,13,12,5,19,14,Recruit at Chapter 8
+Marianne,17,Priest,30,7,20,13,13,13,5,21,15,Recruit at Chapter 9
+Marianne,19,Priest,31,8,21,14,14,14,5,22,16,Recruit at Chapter 10
+Marianne,21,Priest,32,8,22,15,15,15,5,23,17,Recruit at Chapter 11
+Marianne,23,Priest,33,8,23,16,16,16,5,24,18,Recruit at Chapter 12
+
+Leonie,1,Commoner,26,9,5,8,9,6,7,2,7,Initial Stats
+Leonie,3,Commoner,27,10,5,9,10,7,8,2,8,Recruit at Chapter 2
+Leonie,5,Soldier,28,11,6,12,11,8,9,2,9,Recruit at Chapter 3
+Leonie,7,Soldier,29,11,6,13,13,8,9,2,10,Recruit at Chapter 4
+Leonie,9,Soldier,30,12,7,14,14,9,10,2,11,Recruit at Chapter 5
+Leonie,11,Cavalier,33,16,7,16,14,10,14,4,12,Recruit at Chapter 6
+Leonie,13,Cavalier,34,17,7,17,15,11,15,4,12,Recruit at Chapter 7
+Leonie,15,Cavalier,35,18,8,18,16,12,16,4,13,Recruit at Chapter 8
+Leonie,17,Cavalier,37,20,8,19,18,12,17,4,14,Recruit at Chapter 9
+Leonie,19,Cavalier,38,21,9,20,19,13,18,5,16,Recruit at Chapter 10
+Leonie,21,Cavalier,39,22,9,21,20,14,19,5,16,Recruit at Chapter 11
+Leonie,23,Cavalier,40,23,9,22,21,15,20,5,17,Recruit at Chapter 12
+
+# Church
+
+Manuela,15,Priest,34,14,14,13,16,12,8,15,15,Recruit at Chapter 8
+Manuela,17,Priest,36,15,14,13,18,13,8,17,17,Recruit at Chapter 9
+Manuela,19,Priest,37,15,15,14,19,14,9,18,19,Recruit at Chapter 10
+Manuela,21,Priest,38,16,16,15,20,15,9,19,20,Recruit at Chapter 11
+Manuela,23,Priest,39,17,17,16,21,16,9,20,21,Recruit at Chapter 12
+
+Hanneman,15,Mage,32,10,20,13,9,9,7,17,11,Recruit at Chapter 8
+Hanneman,17,Mage,33,10,21,14,9,10,7,19,11,Recruit at Chapter 9
+Hanneman,19,Mage,34,11,23,15,10,10,8,20,12,Recruit at Chapter 10
+Hanneman,21,Mage,35,11,24,16,10,11,8,21,13,Recruit at Chapter 11
+Hanneman,23,Mage,36,12,25,17,10,12,8,22,14,Recruit at Chapter 12
+
+Seteth,23,Wyvern Rider,48,27,15,20,19,12,21,8,20,Recruit at Chapter 12
+
+Flayn,11,Priest,28,8,15,12,9,8,7,19,16,Recruit at Chapter 7
+
+Cyril,9,Commoner,28,10,7,11,11,10,7,4,7,Recruit at Chapter 5
+Cyril,11,Commoner,30,11,8,12,12,11,8,5,8,Recruit at Chapter 6
+Cyril,13,Commoner,31,12,8,13,13,12,9,6,8,Recruit at Chapter 7
+Cyril,15,Commoner,32,13,9,14,14,13,9,6,9,Recruit at Chapter 8
+Cyril,17,Commoner,33,13,10,16,16,14,10,7,10,Recruit at Chapter 9
+Cyril,19,Commoner,34,14,10,17,17,15,10,7,10,Recruit at Chapter 10
+Cyril,21,Commoner,35,15,11,18,18,16,11,8,11,Recruit at Chapter 11
+Cyril,21,Commoner,35,15,11,18,18,16,11,8,11,Recruit at Chapter 12
+
+Catherine,7,Swordmaster,33,19,8,13,18,10,13,8,6,Recruit at Chapter 4
+Catherine,9,Swordmaster,35,19,8,13,18,10,13,8,6,Recruit at Chapter 5
+Catherine,11,Swordmaster,37,19,8,13,20,10,13,8,7,Recruit at Chapter 6
+Catherine,13,Swordmaster,39,19,8,13,21,10,13,8,8,Recruit at Chapter 7
+Catherine,15,Swordmaster,41,20,9,14,23,10,14,8,8,Recruit at Chapter 8
+Catherine,17,Swordmaster,42,21,9,15,22,11,15,8,9,Recruit at Chapter 9
+Catherine,21,Swordmaster,46,24,10,17,28,12,17,8,10,Recruit at Chapter 11
+Catherine,21,Swordmaster,46,24,10,17,28,12,17,8,10,Recruit at Chapter 12
+
+Alois,21,Warrior,50,27,8,12,15,12,18,8,16,Recruit at Chapter 11
+Aloid,23,Warrior,52,29,8,13,16,13,19,8,17,Recruit at Chapter 12
+
+Gilbert,26,Fortress Knight,61,26,10,17,2,10,30,7,16,Azure Moon Chapter 13 Initial Stats
+
+Shamir,11,Sniper,33,18,8,21,14,17,12,8,10,Recruit at Chapter 6
+Shamir,13,Sniper,34,18,8,22,14,18,12,8,10,Recruit at Chapter 7
+Shamir,15,Sniper,35,18,8,24,14,19,12,8,11,Recruit at Chapter 8
+Shamir,17,Sniper,36,18,8,26,14,20,12,8,12,Recruit at Chapter 9
+Shamir,21,Sniper,39,20,8,29,14,22,13,8,13,Recruit at Chapter 11
+Shamir,21,Sniper,39,20,8,29,14,22,13,8,13,Recruit at Chapter 12
+
+# Ashen Wolves
+
+Yuri,3,Commoner,25,11,7,8,10,8,6,8,9,Recruit at Chapter 2
+Yuri,5,Myrmidon,26,12,7,9,13,9,6,8,10,Recruit at Chapter 3
+Yuri,7,Myrmidon,26,12,8,9,15,10,7,9,11,Recruit at Chapter 4
+Yuri,9,Myrmidon,27,13,9,10,16,11,7,9,12,Recruit at Chapter 5
+Yuri,11,Thief,29,16,10,14,19,12,9,11,14,Recruit at Chapter 6
+Yuri,13,Thief,30,17,10,15,21,12,10,11,15,Recruit at Chapter 7
+Yuri,15,Thief,31,18,11,16,22,13,11,12,16,Recruit at Chapter 8
+Yuri,17,Thief,32,19,12,17,24,14,11,13,17,Recruit at Chapter 9
+Yuri,19,Thief,33,20,12,18,25,15,12,13,18,Recruit at Chapter 10
+Yuri,21,Thief,34,21,13,19,27,16,13,14,19,Recruit at Chapter 11
+Yuri,23,Thief,35,22,14,20,29,17,14,15,20,Recruit at Chapter 12
+Yuri,20,Trickster,35,21,13,20,31,20,15,17,18,Cindered Shadows Chapter 2 Initial Stats
+
+Balthus,3,Noble,29,12,6,5,8,3,8,5,5,Recruit at Chapter 2
+Balthus,5,Fighter,30,14,6,6,8,4,9,5,5,Recruit at Chapter 3
+Balthus,7,Fighter,32,16,7,6,9,4,10,5,6,Recruit at Chapter 4
+Balthus,9,Fighter,33,17,7,6,9,5,11,6,7,Recruit at Chapter 5
+Balthus,11,Brawler,37,18,7,10,14,8,13,5,8,Recruit at Chapter 6
+Balthus,13,Brawler,39,19,7,10,15,8,14,5,8,Recruit at Chapter 7
+Balthus,15,Brawler,40,20,8,11,16,8,15,6,9,Recruit at Chapter 8
+Balthus,17,Brawler,42,21,8,12,17,8,16,6,10,Recruit at Chapter 9
+Balthus,19,Brawler,43,23,9,12,18,8,17,7,10,Recruit at Chapter 10
+Balthus,21,Brawler,45,24,9,13,19,8,18,7,11,Recruit at Chapter 11
+Balthus,23,Brawler,47,25,9,14,20,8,19,7,12,Recruit at Chapter 12
+Balthus,20,War Monk,50,26,11,11,13,10,19,14,11,Cindered Shadows Chapter 2 Initial Stats
+
+Constance,3,Noble,23,5,12,7,7,4,3,5,7,Recruit at Chapter 2
+Constance,5,Monk,24,6,13,7,7,5,4,7,7,Recruit at Chapter 3
+Constance,7,Monk,25,6,15,8,8,5,4,8,8,Recruit at Chapter 4
+Constance,9,Monk,25,7,16,8,9,5,4,9,8,Recruit at Chapter 5
+Constance,11,Mage,26,7,19,10,10,8,4,12,9,Recruit at Chapter 6
+Constance,13,Mage,27,7,20,11,10,8,4,13,10,Recruit at Chapter 7
+Constance,15,Mage,27,7,22,11,11,8,4,14,10,Recruit at Chapter 8
+Constance,17,Mage,28,7,23,12,12,8,4,16,11,Recruit at Chapter 9
+Constance,19,Mage,28,8,25,12,12,8,4,17,11,Recruit at Chapter 10
+Constance,21,Mage,29,8,26,13,13,8,4,18,12,Recruit at Chapter 11
+Constance,23,Mage,30,8,27,14,14,8,4,19,13,Recruit at Chapter 12
+Constance,20,Dark Flier,33,12,22,15,19,8,11,17,13,Cindered Shadows Chapter 2 Initial Stats
+
+Hapi,3,Commoner,27,7,12,9,7,4,4,8,5,Recruit at Chapter 2
+Hapi,5,Monk,28,7,13,10,8,5,5,10,5,Recruit at Chapter 3
+Hapi,7,Monk,29,8,14,11,8,5,5,12,6,Recruit at Chapter 4
+Hapi,9,Monk,30,9,15,12,9,6,5,13,6,Recruit at Chapter 5
+Hapi,11,Mage,31,9,18,14,10,8,5,15,7,Recruit at Chapter 6
+Hapi,13,Mage,31,10,19,14,11,8,5,16,8,Recruit at Chapter 7
+Hapi,15,Mage,32,10,20,15,12,8,5,17,8,Recruit at Chapter 8
+Hapi,17,Mage,33,11,21,16,12,8,5,19,9,Recruit at Chapter 9
+Hapi,19,Mage,34,11,22,17,13,8,5,20,9,Recruit at Chapter 10
+Hapi,21,Mage,35,12,23,18,14,8,5,21,10,Recruit at Chapter 11
+Hapi,23,Mage,36,13,24,19,15,8,5,22,11,Recruit at Chapter 12
+Hapi,20,Valkyrie,37,13,26,17,12,10,10,19,14,Cindered Shadows Chapter 2 Initial Stats
+
+# Misc
+
+Jeritza,27,Death Knight,53,32,18,15,27,12,24,18,10,Crimson Flower Chapter 13 Recruit
+
+Anna,5,Myrmidon,28,8,8,9,11,9,6,8,9,Recruit at Chapter 3
+Anna,7,Myrmidon,29,9,9,10,12,10,7,9,10,Recruit at Chapter 4
+Anna,9,Myrmidon,30,10,10,11,13,11,7,9,11,Recruit at Chapter 5
+Anna,11,Thief,32,12,11,15,16,12,9,11,13,Recruit at Chapter 6
+Anna,13,Thief,33,13,11,16,17,12,10,12,14,Recruit at Chapter 7
+Anna,15,Thief,34,14,12,17,19,13,11,13,15,Recruit at Chapter 8
+Anna,17,Thief,35,15,13,18,20,14,11,13,16,Recruit at Chapter 9
+Anna,19,Thief,36,16,13,19,22,15,12,14,17,Recruit at Chapter 10
+Anna,21,Thief,37,17,14,20,23,16,13,15,18,Recruit at Chapter 11
+Anna,23,Thief,38,18,15,21,24,17,14,16,19,Recruit at Chapter 12
+Anna,27,Thief,40,20,16,23,27,19,15,17,21,Recruit at Chapter 14
+Anna,29,Thief,41,21,17,24,29,20,16,18,22,Recruit at Chapter 15
+Anna,31,Thief,43,22,18,26,30,21,17,19,24,Recruit at Chapter 16
+Anna,33,Thief,44,23,18,27,31,21,18,20,25,Recruit at Chapter 17
+Anna,35,Thief,45,24,19,28,33,22,19,21,26,Recruit at Chapter 18
+Anna,37,Thief,46,25,20,29,34,23,19,21,27,Recruit at Chapter 19
+Anna,39,Thief,47,26,20,30,36,24,20,22,28,Recruit at Chapter 20
+Anna,40,Thief,47,27,21,30,36,25,21,23,28,Recruit at Chapter 21
+Anna,42,Thief,49,28,21,32,38,25,21,23,30,Recruit at Chapter 22

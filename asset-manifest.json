@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "./static/css/main.9d5b29c0.chunk.css",
-    "main.js": "./static/js/main.58913718.chunk.js",
-    "main.js.map": "./static/js/main.58913718.chunk.js.map",
+    "main.js": "./static/js/main.667f2d61.chunk.js",
+    "main.js.map": "./static/js/main.667f2d61.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.3891ca5e.js",
     "runtime-main.js.map": "./static/js/runtime-main.3891ca5e.js.map",
     "static/js/2.048e5962.chunk.js": "./static/js/2.048e5962.chunk.js",
@@ -30,7 +30,7 @@
     "static/media/catherine_1.3fbec75f.png": "./static/media/catherine_1.3fbec75f.png",
     "static/media/character_growth_rates.adf11c0c.csv": "./static/media/character_growth_rates.adf11c0c.csv",
     "static/media/character_max_stats.ebd6b9f7.csv": "./static/media/character_max_stats.ebd6b9f7.csv",
-    "static/media/character_presets.20dafe28.csv": "./static/media/character_presets.20dafe28.csv",
+    "static/media/character_presets.a5a471a1.csv": "./static/media/character_presets.a5a471a1.csv",
     "static/media/character_traits.918f2cd0.csv": "./static/media/character_traits.918f2cd0.csv",
     "static/media/class_bonus_stats.73a62dea.csv": "./static/media/class_bonus_stats.73a62dea.csv",
     "static/media/class_growth_rates.1801c3b7.csv": "./static/media/class_growth_rates.1801c3b7.csv",
@@ -98,6 +98,6 @@
     "static/js/runtime-main.3891ca5e.js",
     "static/js/2.048e5962.chunk.js",
     "static/css/main.9d5b29c0.chunk.css",
-    "static/js/main.58913718.chunk.js"
+    "static/js/main.667f2d61.chunk.js"
   ]
 }
