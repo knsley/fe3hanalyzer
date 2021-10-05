@@ -77,13 +77,13 @@ export function HeaderAndDocumentation(props : HeaderAndDocumentationProps) : JS
             <Typography variant="h3">
                 FE:3H Character Analyzer
             </Typography>
-            <a href={repoUrl} style={{display: 'block', float: 'right', marginTop: 18}}>
+            <a href={repoUrl} style={{display: 'block', float: 'right', marginTop: 18}} target="_blank" rel="noreferrer">
                 <img src={GithubIcon} alt="Link to GitHub repository" style={{height: 16, width: 16}}/>
             </a>
             <div style={LinksTrayStyle}>
-                <Link href={FaqUrl} underline="always"><HelpOutlineIcon fontSize="small" style={{...MenuIconStyle, marginLeft: 0}}/>FAQ</Link>
-                <Link href={DocumentationUrl} underline="always"><MenuBookIcon fontSize="small" style={MenuIconStyle}/>Documentation</Link>
-                <Link href={AboutDocsUrl} underline="always"><InfoIcon fontSize="small" style={MenuIconStyle}/>About</Link>
+                <Link href={FaqUrl} underline="always" target="_blank" rel="noreferrer"><HelpOutlineIcon fontSize="small" style={{...MenuIconStyle, marginLeft: 0}}/>FAQ</Link>
+                <Link href={DocumentationUrl} underline="always" target="_blank" rel="noreferrer"><MenuBookIcon fontSize="small" style={MenuIconStyle}/>Documentation</Link>
+                <Link href={AboutDocsUrl} underline="always" target="_blank" rel="noreferrer"><InfoIcon fontSize="small" style={MenuIconStyle}/>About</Link>
             </div>
         </Card>
     </div>;

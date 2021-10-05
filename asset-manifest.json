@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "./static/css/main.9d5b29c0.chunk.css",
-    "main.js": "./static/js/main.667f2d61.chunk.js",
-    "main.js.map": "./static/js/main.667f2d61.chunk.js.map",
+    "main.js": "./static/js/main.34adb7f7.chunk.js",
+    "main.js.map": "./static/js/main.34adb7f7.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.3891ca5e.js",
     "runtime-main.js.map": "./static/js/runtime-main.3891ca5e.js.map",
     "static/js/2.048e5962.chunk.js": "./static/js/2.048e5962.chunk.js",
@@ -10,7 +10,7 @@
     "index.html": "./index.html",
     "static/css/main.9d5b29c0.chunk.css.map": "./static/css/main.9d5b29c0.chunk.css.map",
     "static/js/2.048e5962.chunk.js.LICENSE.txt": "./static/js/2.048e5962.chunk.js.LICENSE.txt",
-    "static/media/about.8a175884.md": "./static/media/about.8a175884.md",
+    "static/media/about.435f0651.md": "./static/media/about.435f0651.md",
     "static/media/alois_1.f5e800a6.png": "./static/media/alois_1.f5e800a6.png",
     "static/media/anna_1.6172a297.png": "./static/media/anna_1.6172a297.png",
     "static/media/annette_1.d3ba9d78.png": "./static/media/annette_1.d3ba9d78.png",
@@ -46,12 +46,12 @@
     "static/media/dedue_2.b7d7355d.png": "./static/media/dedue_2.b7d7355d.png",
     "static/media/dimitri_1.907277ab.png": "./static/media/dimitri_1.907277ab.png",
     "static/media/dimitri_2.e2bcb3c7.png": "./static/media/dimitri_2.e2bcb3c7.png",
-    "static/media/docs.8a175884.md": "./static/media/docs.8a175884.md",
+    "static/media/docs.81f93ef2.md": "./static/media/docs.81f93ef2.md",
     "static/media/dorothea_1.352f3ff9.png": "./static/media/dorothea_1.352f3ff9.png",
     "static/media/dorothea_2.e5489f82.png": "./static/media/dorothea_2.e5489f82.png",
     "static/media/edelgard_1.26fb14c9.png": "./static/media/edelgard_1.26fb14c9.png",
     "static/media/edelgard_2.2decafcd.png": "./static/media/edelgard_2.2decafcd.png",
-    "static/media/faq.8a175884.md": "./static/media/faq.8a175884.md",
+    "static/media/faq.703cf2f6.md": "./static/media/faq.703cf2f6.md",
     "static/media/felix_1.e12a41a1.png": "./static/media/felix_1.e12a41a1.png",
     "static/media/felix_2.65a4d1f4.png": "./static/media/felix_2.65a4d1f4.png",
     "static/media/ferdinand_1.e01d4ba9.png": "./static/media/ferdinand_1.e01d4ba9.png",
@@ -98,6 +98,6 @@
     "static/js/runtime-main.3891ca5e.js",
     "static/js/2.048e5962.chunk.js",
     "static/css/main.9d5b29c0.chunk.css",
-    "static/js/main.667f2d61.chunk.js"
+    "static/js/main.34adb7f7.chunk.js"
   ]
 }

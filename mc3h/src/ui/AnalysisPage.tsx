@@ -201,7 +201,7 @@ export class AnalysisPage extends React.Component<AnalysisPageProps, AnalysisPag
             : <Accordion>
                 <AccordionSummary expandIcon={<ExpandMoreIcon />} id="rejesus_display">
                     <Typography variant="h6" style={{flexBasis: "33%", flexShrink: 0, textAlign: "start"}}>
-                        RNJesus Luck Analysis
+                        RNGesus Luck Analysis
                     </Typography>
                     <Typography variant="h6" style={{opacity: 0.5}}>click to open</Typography>
                 </AccordionSummary>
