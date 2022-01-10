@@ -26,7 +26,9 @@ export const CharacterTraits = new Map<CharacterName, Traits>();
 export async function loadCharacterTraitsFromDataFile(dataFile : string) : Promise<void>
 {
     const fetchFunc = getFetchProvider().fetch;
-    const data = await fetchFunc(dataFile).then(text => text.replaceAll("\r\n","\n"));
+    const data = await fetchFunc(dataFile).then(text => {
+        return text.replaceAll("\r\n","\n");
+    });
 
     const parseConfig = {
         delimiter: ',',

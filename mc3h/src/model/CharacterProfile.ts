@@ -35,7 +35,29 @@ export interface CharacterProfile
 // What class will a character land on if the analysis ends at a given level?
 export function getFinalClassAtLevelForProfile(profile : CharacterProfile, level : number) : CharacterClass
 {
-    return profile.startClass;
+    const candidateClassChanges = profile.changes.filter(classChange => (classChange.level <= level));
+
+    if (candidateClassChanges.length === 0)
+    {
+        return profile.startClass;
+    }
+
+    // Could be more big-O efficient by using a map but we don't expect the class changes list to get big, so this 
+    // should be fine. Possibly even faster than going through a map at sub-20 elements.
+
+    // Else find highest level that is still beneath or equal to "level", then find the highest index match.
+    const highestCandidateLevel = candidateClassChanges.reduce((p, c) => (p.level > c.level ? p : c)).level;
+    
+    // Get the last of the matched level
+    for (let i = candidateClassChanges.length - 1; i >= 0; i--)
+    {
+        if (candidateClassChanges[i].level === highestCandidateLevel)
+        {
+            return candidateClassChanges[i].class;
+        }
+    }
+
+    throw new Error("Code should not reach here. If it does, it means the algorithm for finding the expected character class is wrong.");
 }
 
 function getNormalizedStatString(stats : StatArray) : string

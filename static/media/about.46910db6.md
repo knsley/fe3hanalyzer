@@ -16,7 +16,7 @@ file, You can obtain one at [http://mozilla.org/MPL/2.0/](http://mozilla.org/MPL
 
 This project is hosted at [https://github.com/knsley/fe3hanalyzer/](https://github.com/knsley/fe3hanalyzer/). 
 
-Please feel free to submit changes or fork for your own uses. Bug reports and feature requests are welcome and appreciated, though they might not be addressed.
+Please feel free to submit changes or fork for your own uses. Bug reports and feature requests are welcome and appreciated.
 
 ## Game Mechanics Sources
 

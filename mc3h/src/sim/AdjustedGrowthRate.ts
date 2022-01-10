@@ -38,8 +38,10 @@ export function getAdjustedGrowthRates(rawGrowthRate : StatUpProbabilities) : St
     const pZeroOtherwise : StatUpProbabilities = computeZeroOtherwiseProbabilities(rawGrowthRate);
     const pZeroOrOneTotal : number = computeZeroOrOneStatUpProbability(rawGrowthRate, pZeroOtherwise);
 
-    return forEachStatIndex(index => {
+    const adjustedStats = forEachStatIndex(index => {
         const pUp = rawGrowthRate[index];
         return pUp * (1 - pZeroOtherwise[index]) + guaranteedLowStatUpStats[index] * pZeroOrOneTotal;
     }) as StatUpProbabilities;
+
+    return adjustedStats;
 }

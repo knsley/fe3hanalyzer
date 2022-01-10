@@ -125,6 +125,21 @@ export function forEachStatIndex<T>(callback : (index : number) => T) : T[]
     return output;
 }
 
+export function forAllStatIndices(callback : (index : number) => boolean) : boolean
+{
+    const statCount = STAT_COUNT;
+
+    for (let i = 0; i < statCount; i++)
+    {
+        if (!callback(i))
+        {
+            return false;
+        }
+    }
+
+    return true;
+}
+
 export function mapStatArray<T extends StatArray | StatUpProbabilities, U>(stat : T, callback : (stat : number, index : number) => U) : U[]
 {
     let outputs = new Array<U>(9);
@@ -204,6 +219,12 @@ export function statsMin(s1 : StatArray, s2 : StatArray)
 export function statsMax(s1 : StatArray, s2 : StatArray)
 {
     return _statApply(s1, s2, (a, b) => Math.max(a, b));
+}
+
+export function statToString(s : StatArray)
+{
+    const segments : string[] = forEachStatIndex(i => `${getCanonicalStatNameByIndex(i)}: ${s[i]}`);
+    return `{${segments.join(", ")}}`;
 }
 
 export class StatAccumulator

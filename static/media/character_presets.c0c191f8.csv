@@ -244,6 +244,7 @@ Lysithea,17,Mage,27,5,23,18,15,8,3,16,10,Recruit at Chapter 9
 Lysithea,19,Mage,27,6,25,19,16,8,3,17,10,Recruit at Chapter 10
 Lysithea,21,Mage,28,6,26,20,17,8,3,18,11,Recruit at Chapter 11
 Lysithea,23,Mage,29,6,27,21,18,8,3,19,12,Recruit at Chapter 12
+Lysithea,29,Mage,30,7,32,25,21,8,3,23,14,Recruit at Crimson Flower Chapter 14
 
 Ignatz,1,Commoner,25,8,5,7,8,8,4,6,4,Initial Stats
 Ignatz,3,Commoner,26,9,6,8,9,9,5,7,5,Recruit at Chapter 2
@@ -316,7 +317,7 @@ Catherine,9,Swordmaster,35,19,8,13,18,10,13,8,6,Recruit at Chapter 5
 Catherine,11,Swordmaster,37,19,8,13,20,10,13,8,7,Recruit at Chapter 6
 Catherine,13,Swordmaster,39,19,8,13,21,10,13,8,8,Recruit at Chapter 7
 Catherine,15,Swordmaster,41,20,9,14,23,10,14,8,8,Recruit at Chapter 8
-Catherine,17,Swordmaster,42,21,9,15,22,11,15,8,9,Recruit at Chapter 9
+Catherine,17,Swordmaster,42,21,9,15,25,11,15,8,9,Recruit at Chapter 9
 Catherine,21,Swordmaster,46,24,10,17,28,12,17,8,10,Recruit at Chapter 11
 Catherine,21,Swordmaster,46,24,10,17,28,12,17,8,10,Recruit at Chapter 12
 

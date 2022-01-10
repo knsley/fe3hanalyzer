@@ -16,7 +16,7 @@ import { CharacterClass } from '../data/CharacterClass';
 import { areEquivalentStatLimitMods, StatLimitMods } from '../data/CharacterData';
 import { CharacterName } from '../data/CharacterName';
 import { getEligibleClasses } from '../data/ClassData';
-import { ClassChange, GrowthProfile } from '../sim/GrowthProfile';
+import { ClassChange, GrowthProfile, validateClassProfile } from '../sim/GrowthProfile';
 import { areEqualStats } from '../sim/StatArray';
 import { CharacterProfile } from '../model/CharacterProfile';
 import { ClassChangeEditor } from './ClassChangeEditor';
@@ -38,13 +38,20 @@ function removeUnusedClassChanges(profile : CharacterProfile) : Array<ClassChang
 export function getGrowthProfileFromCharacterProfile(profile : CharacterProfile) : GrowthProfile
 {
     const filteredClassChanges = removeUnusedClassChanges(profile);
-    return {
+    const growthProfile : GrowthProfile = {
         startLevel: profile.startLevel,
         startClass: profile.startClass,
         startStats: [...profile.startStats],
         changes: filteredClassChanges,
         endLevel: profile.endLevel,
     };
+
+    if (!validateClassProfile(growthProfile))
+    {
+        throw new Error("Class changes are out of order in character profile.");
+    }
+
+    return growthProfile;
 }
 
 // Compares normalized profiles and returns whether they are equivalent. 

@@ -9,15 +9,17 @@ file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 import seedrandom from "seedrandom";
 import { CharacterClass } from "../../src/data/CharacterClass";
-import { getBaseStatsFromClassStats, getCharacterBaseGrowths, getCharacterTraits } from "../../src/data/CharacterData";
+import { getBaseStatsFromClassStats, getCharacterBaseGrowths, getCharacterMaxBaseStats, getCharacterTraits } from "../../src/data/CharacterData";
 import { CharacterName } from "../../src/data/CharacterName";
 import { getClassGeneralData, getClassGrowthRateMod } from "../../src/data/ClassData";
 import { GrowthProfile } from "../../src/sim/GrowthProfile";
 import { DistributionsByStat, getDistributionByStatIndex } from "../../src/sim/GrowthResultAccumulator";
-import { addProbabilities, forEachStat, forEachStatIndex, forEachStatV, iTOTAL, StatArray, statTotal, StatUpProbabilities } from "../../src/sim/StatArray";
+import { addProbabilities, addStats, forAllStatIndices, forEachStat, forEachStatIndex, forEachStatV, iTOTAL, StatArray, statTotal, StatUpProbabilities } from "../../src/sim/StatArray";
+import { computeLuckMetric, computePercentileRankForDistribution } from "../../src/ui/LuckAnalysisReport";
 
 
-function simulateLevelup(statsBuffer : StatArray, character : CharacterName, characterClass : CharacterClass, rng : seedrandom.prng) : void
+function simulateLevelup(statsBuffer : StatArray, character : CharacterName, characterClass : CharacterClass, 
+    maxStats : StatArray, rng : seedrandom.prng) : void
 {
     const baseGrowth = getCharacterBaseGrowths(character);
     const classGrowths = getClassGrowthRateMod(characterClass);
@@ -37,7 +39,7 @@ function simulateLevelup(statsBuffer : StatArray, character : CharacterName, cha
     }
 
     forEachStatV(statUps, (s, i) => {
-        statsBuffer[i] += s;
+        statsBuffer[i] = Math.min(statsBuffer[i] + s, maxStats[i]);
     });
 }
 
@@ -59,6 +61,13 @@ function simulateClassChange(statsBuffer : StatArray, currentClass : CharacterCl
     });
 }
 
+
+function getMaxStats(maxBaseStats: StatArray, characterClass: CharacterClass) : StatArray 
+{
+    const classData = getClassGeneralData(characterClass);
+    return addStats(maxBaseStats, classData.bonusStats);
+}
+
 // Final stat array includes class bonus stats.
 function runProfileSimulation(character : CharacterName, growthProfile : GrowthProfile, rng : seedrandom.prng) : StatArray
 {
@@ -75,10 +84,13 @@ function runProfileSimulation(character : CharacterName, growthProfile : GrowthP
 
     const currentStats : StatArray = [...growthProfile.startStats];
     let currentClass = growthProfile.startClass;
+    
     for (let level = growthProfile.startLevel + 1; level <= growthProfile.endLevel; level++)
     {
+        const maxStats = getMaxStats(getCharacterMaxBaseStats(character), currentClass);
+
         // Do previous levelup
-        simulateLevelup(currentStats, character, currentClass, rng);
+        simulateLevelup(currentStats, character, currentClass, maxStats, rng);
         
         for (const classChange of (levelups.get(level) ?? []))
         {
@@ -130,6 +142,40 @@ export function runMonteCarloSimulation(character : CharacterName, growthProfile
     })
 
     return distributions;
+}
+
+export interface RngesusFormulaSimulationResult
+{
+    // Not guaranteed to be integers. sampleSize might be 1, might be actual sample size,
+    // use it to normalize the probabilities.
+    countEqualOrLess : number;
+    countEqualOrMore : number;
+    sampleSize : number;
+}
+
+// Returns median metric
+export function runMonteCarloSimulationForLuckMetric(character : CharacterName, growthProfile : GrowthProfile, 
+    statDistributions : DistributionsByStat, sampleSize : number = 50000, seed : number = 23984619) : number[]
+{
+    if (sampleSize <= 0)
+    {
+        throw new Error("Invalid sample size");
+    }
+
+    const rng = seedrandom(seed.toString());
+    const results : number[] = new Array(sampleSize);
+
+    for (let i = 0; i < sampleSize; i++)
+    {
+        const simResult : StatArray = runProfileSimulation(character, growthProfile, rng);
+        const simRanks = computePercentileRankForDistribution(simResult, statDistributions);
+        results[i] = computeLuckMetric(simRanks);
+    }
+
+    // Now compute the median
+    const sortedResults = results.sort((a,b) => a - b);
+
+    return sortedResults;
 }
 
 export function runMonteCarloAdjustedGrowthRateSimulation(growths : StatUpProbabilities, isStudent : boolean, sampleSize : number = 1000000, seed = 239047) : StatUpProbabilities

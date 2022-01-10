@@ -12,12 +12,12 @@ file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 import { CharacterClass, getClassDisplayName } from "../data/CharacterClass";
 import { getCharacterBaseGrowths, getBaseStatsFromClassStats, getCharacterMaxBaseStats, StatLimitMods, getCharacterTraits } from "../data/CharacterData";
-import { CharacterName } from "../data/CharacterName";
+import { CharacterName, getCharacterDisplayName } from "../data/CharacterName";
 import { getClassGeneralData, getClassGrowthRateMod } from "../data/ClassData";
 import { getAdjustedGrowthRates } from "./AdjustedGrowthRate";
 import { GrowthProfile } from "./GrowthProfile";
 import { ProbabilityArray } from "./ProbabilityArray";
-import { iCHA, iDEF, iDEX, iHP, iLCK, iMAG, iRES, iSPD, iSTR, iTOTAL, addProbabilities, StatArray, StatUpProbabilities } from "./StatArray";
+import { iCHA, iDEF, iDEX, iHP, iLCK, iMAG, iRES, iSPD, iSTR, iTOTAL, addProbabilities, StatArray, StatUpProbabilities, statToString } from "./StatArray";
 import { computeStatGrowthTotalProbabilities } from "./StatGrowthTotalCalculator";
 
 export interface DistributionsByStat
@@ -146,6 +146,14 @@ export function precomputeClassChanges(profile : GrowthProfile) : Array<Array<Ch
     return computedChanges;
 }
 
+function logGrowthRates(character: CharacterName, isStudent: boolean, characterClass: CharacterClass, 
+    rawGrowths: StatUpProbabilities, adjustedGrowths: StatUpProbabilities) : void
+{
+    console.info(`Growth rate adjustments for ${getCharacterDisplayName(character)} as ${getClassDisplayName(characterClass)}:`
+        + `\n     raw: ${statToString(rawGrowths)}`
+        + `\nadjusted: ${statToString(adjustedGrowths)}`);
+}
+
 export function precomputeClassGrowthRates(character : CharacterName, profile : GrowthProfile) : Map<CharacterClass, NormalAndAdjustedGrowthRate>
 {
     const isStudent = getCharacterTraits(character).isStudent;
@@ -157,6 +165,9 @@ export function precomputeClassGrowthRates(character : CharacterName, profile : 
     const startClassGrowthMod = getClassGrowthRateMod(profile.startClass);
     const startClassRawGrowth = addProbabilities(baseLevelups, startClassGrowthMod)
     const startClassAdjustedGrowths = isStudent ? getAdjustedGrowthRates(startClassRawGrowth) : startClassRawGrowth;
+
+    logGrowthRates(character, isStudent, profile.startClass, startClassRawGrowth, startClassAdjustedGrowths);
+
     cache.set(profile.startClass, {
         normal: startClassRawGrowth,
         adjusted: startClassAdjustedGrowths
@@ -168,6 +179,9 @@ export function precomputeClassGrowthRates(character : CharacterName, profile : 
             const growthMod = getClassGrowthRateMod(change.class);
             const rawGrowths = addProbabilities(baseLevelups, growthMod);
             const adjustedGrowths = isStudent ? getAdjustedGrowthRates(rawGrowths) : rawGrowths;
+
+            logGrowthRates(character, isStudent, change.class, rawGrowths, adjustedGrowths);
+
             cache.set(change.class, {
                 normal: rawGrowths,
                 adjusted: adjustedGrowths
@@ -356,3 +370,4 @@ export class GrowthResultAccumulator
         this.perLevel.set(actualLevel, exportStatDistributions(statDistribution, bonusStats, levelupDistribution));
     }
 }
+

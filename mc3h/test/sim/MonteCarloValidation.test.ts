@@ -74,13 +74,13 @@ function distributionsAreClose(simulated : Map<number,number>, computed : Map<nu
 test("Full computation results should resemble simulation results for a student character", async () => {
     await loadData();
 
-    // The idea is that for a given delta, there should exist a finite sample size at p approaching 1.0,
-    // where the outcomes are all within the delta. Though this simulation is very expensive so iteration
-    // count is kept down a bit to keep tests from running for minutes.
+    // The idea is that for a given delta from computed values, as sample size approaches infinity the probability
+    // that sampled outcomes are within the delta should approach 1. So we just test with a big sample size and an
+    // aggressive enough delta. This simulation is very expensive so iteration count is kept down a bit to keep tests
+    // from running for too many minutes.
     const SIM_DELTA = 0.001;
     const SAMPLE_SIZE = 2000000;
 
-    // Limit to two levels and a class change to keep things predictable.
     const character = CharacterName.Ingrid;
     const growthProfile : GrowthProfile = {
         startLevel : 5,
@@ -115,12 +115,13 @@ test("Full computation results should resemble simulation results for a student 
 test("Full computation results should resemble simulation results for a non-student character", async () => {
     await loadData();
 
-    // The idea is that for a given delta, there should exist a finite sample size at p approaching 1.0,
-    // where the outcomes are all within the delta. 
+    // The idea is that for a given delta from computed values, as sample size approaches infinity the probability
+    // that sampled outcomes are within the delta should approach 1. So we just test with a big sample size and an
+    // aggressive enough delta. This simulation is very expensive so iteration count is kept down a bit to keep tests
+    // from running for too many minutes.
     const SIM_DELTA = 0.001;
     const SAMPLE_SIZE = 2000000;
 
-    // Limit to two levels and a class change to keep things predictable.
     const character = CharacterName.Shamir;
     const growthProfile : GrowthProfile = {
         startLevel : 11,
@@ -150,8 +151,10 @@ test("Full computation results should resemble simulation results for a non-stud
 test("Single level growth rates calculated using adjustedGrowthRates should resemble simulation results for a student character", async () => {
     await loadData();
 
-    // The idea is that for a given delta, there should exist a finite sample size at p approaching 1.0,
-    // where the outcomes are all within the delta.
+    // The idea is that for a given delta from computed values, as sample size approaches infinity the probability
+    // that sampled outcomes are within the delta should approach 1. So we just test with a big sample size and an
+    // aggressive enough delta. This simulation is very expensive so iteration count is kept down a bit to keep tests
+    // from running for too many minutes.
     const STAT_DELTA = 0.001;
     const SAMPLE_SIZE = 1000000;
 
@@ -173,8 +176,10 @@ test("Single level growth rates calculated using adjustedGrowthRates should rese
 test("Single level stat count distributions should resemble simulation results for student characters", async() => {
     await loadData();
 
-    // The idea is that for a given delta, there should exist a finite sample size at p approaching 1.0,
-    // where the outcomes are all within the delta.
+    // The idea is that for a given delta from computed values, as sample size approaches infinity the probability
+    // that sampled outcomes are within the delta should approach 1. So we just test with a big sample size and an
+    // aggressive enough delta. This simulation is very expensive so iteration count is kept down a bit to keep tests
+    // from running for too many minutes.
     const SIM_DELTA = 0.001;
     const SAMPLE_SIZE = 1000000;
 
@@ -194,8 +199,10 @@ test("Single level stat count distributions should resemble simulation results f
 test("Single level stat count distributions should resemble simulation results for non-student characters", async() => {
     await loadData();
 
-    // The idea is that for a given delta, there should exist a finite sample size at p approaching 1.0,
-    // where the outcomes are all within the delta.
+    // The idea is that for a given delta from computed values, as sample size approaches infinity the probability
+    // that sampled outcomes are within the delta should approach 1. So we just test with a big sample size and an
+    // aggressive enough delta. This simulation is very expensive so iteration count is kept down a bit to keep tests
+    // from running for too many minutes.
     const SIM_DELTA = 0.001;
     const SAMPLE_SIZE = 1000000;
 

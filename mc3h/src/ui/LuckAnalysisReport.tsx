@@ -17,7 +17,7 @@ import { getFinalClassAtLevelForProfile } from "../model/CharacterProfile";
 import { AnalysisComponent, AnalysisReport } from "../model/PageManager";
 import { clamp } from "../model/Util";
 import { computeDistributionMedianForSingleStat, DistributionsByStat, getDistributionByStatIndex } from "../sim/GrowthResultAccumulator";
-import { areEqualStats, forEachStatIndex, getCanonicalStatNameByIndex, initStats, mapStatArray, StatArray, zeroStats } from "../sim/StatArray";
+import { areEqualStats, forEachStatIndex, getCanonicalStatNameByIndex, initStats, mapStatArray, StatArray, statTotal, zeroStats } from "../sim/StatArray";
 import { SERIES_COLOR_SCHEMES } from "./ChartColorScheme";
 import { StatArraySelector } from "./InitialStatsEditor";
 import HelpIcon from '@material-ui/icons/Help';
@@ -51,7 +51,7 @@ interface ChartDatum
     reference : number;
 }
 
-type StatPercentileRanks = Map<string, StatRankingRaw>;
+export type StatPercentileRanks = Map<string, StatRankingRaw>;
 
 export interface SingleProfileReportProps
 {
@@ -78,12 +78,9 @@ const ReferenceStatElementStyle : React.CSSProperties = {
     flexShrink : 0,
 };
 
-const RngRatingExplanation : JSX.Element = <span>The RNG rating is a number from 0 to 1 (or &quot;WTF&quot;) representing how good the character's RNG luck was.
-    0.5 means average luck. &quot;WTF&quot; means the character's RNG luck was simultaneously impossibly good and impossibly bad.
-    RNG rating is calculated as P<sub>b</sub> / (P<sub>a</sub> + P<sub>b</sub>). 
-    <br />
-    P<sub>a</sub> is the probability that, if the character's levelups were rerolled,
-    all resulting stats would be equal or better. P<sub>b</sub> is the probability that, if rerolled, all stats would be equal or worse.
+const RngRatingExplanation : JSX.Element = <span>The RNG rating goes from -1 (worst possible) to 1 (best possible) representing
+    the character's <b>overall</b> RNG luck. 0 is average. Below -0.3 and above 0.3 should be considered unusually bad/good 
+    luck. Numbers past -0.7/0.7 without stat booster items are extremely rare.
     </span>;
 
 function computeChartData(distributions : DistributionsByStat, ranks : StatPercentileRanks) : ChartDatum[]
@@ -147,15 +144,9 @@ function computeStatSplit(distribution : Map<number, number>, referenceStat : nu
     return [below, same, above];
 }
 
-function computePercentileRanks(referenceStats : StatArray, singleReportComponent : AnalysisComponent, selectedLevel : number) : StatPercentileRanks
+// Used in test code
+export function computePercentileRankForDistribution(referenceStats : StatArray, distribution : DistributionsByStat) : StatPercentileRanks
 {
-    const distribution = singleReportComponent.result.get(selectedLevel);
-
-    if (distribution === undefined)
-    {
-        throw new RangeError(`No stat distribution found for level ${selectedLevel}.`);
-    }
-
     // for each stat, compute rank
     const splits = mapStatArray(referenceStats, (referenceStat, index) => {
         // We ignore the "same" values
@@ -171,23 +162,57 @@ function computePercentileRanks(referenceStats : StatArray, singleReportComponen
     return result;
 }
 
-function computeLuckQuotient(ranks : StatPercentileRanks) : number
+function computePercentileRanks(referenceStats : StatArray, singleReportComponent : AnalysisComponent, selectedLevel : number) : StatPercentileRanks
 {
-    let belowOrSameProduct = 1.0;
-    let aboveOrSameProduct = 1.0;
+    const distribution = singleReportComponent.result.get(selectedLevel);
 
-    //console.log("Calculating rank splits");
-    for (const ranking of ranks.values())
+    if (distribution === undefined)
     {
-        belowOrSameProduct *= (ranking.below + ranking.same);
-        aboveOrSameProduct *= (ranking.above + ranking.same);
-
-        //console.log(`Below/above: ${(ranking.below + ranking.same)}/${(ranking.above + ranking.same)}`);
+        throw new RangeError(`No stat distribution found for level ${selectedLevel}.`);
     }
 
-    // Adding in the "same" component because "strictly more" can result in losing resolution
-    const denominator = belowOrSameProduct + aboveOrSameProduct;
-    return belowOrSameProduct / denominator;
+    return computePercentileRankForDistribution(referenceStats, distribution);
+}
+
+// We want extreme good/bad luck to have an outsized effect on the ranking.
+function biasForExtremeValues(rank : number) : number
+{
+    const exp = 2.0;
+
+    if (rank >= 0.5)
+    {
+        return Math.pow(rank * 2.0 - 1.0, exp);
+    }
+    else
+    {
+        return -Math.pow(-(rank * 2.0 - 1.0), exp);
+    }
+}
+
+function activationFunction(x : number) : number
+{
+    const scalar = 2.0;
+    return Math.tanh(x * scalar);
+}
+
+export function computeLuckMetric(ranks : StatPercentileRanks) : number
+{
+    // Bias towards strength and magic, bias away from luck and charisma.
+    const weights : StatArray = [1.0, 1.5, 1.5, 1.0, 1.0, 0.3, 1.0, 1.0, 0.5];
+
+    let weightedSum = 0.0;
+
+    forEachStatIndex( i => {
+        // Can safely coerce the undefined because this usage should not look up nonexistent keys.
+        const rank : StatRankingRaw = ranks.get(getCanonicalStatNameByIndex(i)) as StatRankingRaw;
+        const element = rank.below + 0.5 * rank.same;
+        weightedSum += weights[i] * biasForExtremeValues(element);
+    });
+
+    const normalizedSum = weightedSum / statTotal(weights);
+
+    // Coerce the range to fit into -1 to +1
+    return activationFunction(normalizedSum);
 }
 
 const ContainerStyle : React.CSSProperties = {
@@ -310,9 +335,10 @@ export class LuckAnalysisReport extends React.Component<LuckAnalysisReportProps,
             const characterName = getCharacterDisplayName(component.profile.character);
             const characterClass=  getClassDisplayName(getFinalClassAtLevelForProfile(component.profile, useLevel))
             const positions = computePercentileRanks(this.state.referenceStats, component, useLevel);;
-            const luckQuotient = computeLuckQuotient(positions);
+            const luckQuotient = computeLuckMetric(positions);
+            //const luckQuotient = computeLuckQuotient(positions);
 
-            const luckQuotientText = isNaN(luckQuotient) ? "WTF" : luckQuotient.toFixed(6);
+            const luckQuotientText = isNaN(luckQuotient) ? "WTF" : luckQuotient.toFixed(3);
 
             const characterTextColor = SERIES_COLOR_SCHEMES[index].medianValueColor;
     
@@ -326,21 +352,21 @@ export class LuckAnalysisReport extends React.Component<LuckAnalysisReportProps,
                             <span style={{color: characterTextColor, fontWeight: 'bold'}}>level {useLevel} {characterClass}</span>?
                         </Typography>
                     </div>
-                    <div style={{display: 'flex', flexDirection: 'row', alignItems: 'baseline'}}>
+                    <div>
+                        <SingleProfileReport ranks={positions} profileIndex={index} distributions={distributionsByStat} characterName={characterName}/>
+                    </div>
+                    <div style={{display: 'flex', flexDirection: 'row', alignItems: 'baseline', marginTop: 10}}>
                         <div style={{flexBasis: 'auto', flexGrow: 0, flexShrink: 0}}>
-                            <Typography variant="body2">RNG rating:</Typography>
+                            <Typography variant="body1">Overall RNG luck:&nbsp;</Typography>
                         </div>
                         <div style={{flexBasis: 'auto', flexGrow: 0, flexShrink: 0}}>
-                            <Typography style={LuckQuotientHighlight}>{luckQuotientText}</Typography>
+                            <Typography style={LuckQuotientHighlight}>{luckQuotientText}&nbsp;</Typography>
                         </div>
                         <div style={{flexBasis: 'auto', flexGrow: 0, flexShrink: 0, position: 'relative', top: 1}}>
                             <MuiTooltip title={RngRatingExplanation}>
                                 <HelpIcon fontSize='small'/>
                             </MuiTooltip>
                         </div>
-                    </div>
-                    <div>
-                        <SingleProfileReport ranks={positions} profileIndex={index} distributions={distributionsByStat} characterName={characterName}/>
                     </div>
                 </Card>
             );
