@@ -93,10 +93,10 @@ export interface CharacterProfileBuilderProps
 
 const CharacterCardStyle : React.CSSProperties = {
     margin: 8,
+    overflow: "visible",
 };
 
 const ContainerStyle : React.CSSProperties = {
-    maxWidth: 1000,
     display: 'flex',
     flexBasis : "auto",
     flexWrap : "nowrap",
@@ -116,10 +116,11 @@ const CharacterStatsContainer : React.CSSProperties = {
     display: 'flex',
     flexDirection: 'column',
     flexBasis: 'auto',
-    flexShrink: 0,
+    flexShrink: 1,
     flexGrow: 1,
     alignItems: 'flex-start',
-    alignContent: 'baseline'
+    alignContent: 'baseline',
+    width: '756px',
 }
 
 // Based on empirically measured values, because it's good enough (tm)
@@ -139,7 +140,7 @@ const OtherSettingsContainerStyle : React.CSSProperties = {
     alignContent: "flex-start",
     flexBasis: 0,
     marginTop: 16,
-    marginRight: 16,
+    marginRight: 0,
     marginLeft: 16,
 };
 

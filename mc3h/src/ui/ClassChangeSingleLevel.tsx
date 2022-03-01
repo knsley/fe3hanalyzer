@@ -113,7 +113,7 @@ const DropContainerStyle : React.CSSProperties = {
     backgroundColor: 'transparent',
     display: 'flex',
     flexDirection: 'row',
-    flexShrink: 0,
+    flexShrink: 1,
     flexGrow: 0,
     flexWrap: "nowrap",
     paddingTop: 8,

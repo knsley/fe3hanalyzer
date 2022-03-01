@@ -22,7 +22,7 @@ export interface ClassChangeListProps
 
 const CONTAINER_STYLE : React.CSSProperties = {
     display : "flex",
-    flexDirection : "row",
+    flexDirection : "column",
     flexBasis : 0,
     justifyContent: "flex-start",
     alignItems : "flex-start",
